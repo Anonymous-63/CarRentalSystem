@@ -17,8 +17,8 @@ import java.util.function.Function;
 @Component
 public class JwtTokenHelper {
 
-    public static final long JWT_TOKEN_VALIDITY = (long) 5 * 60 * 60; // 5 hours
-    public static final long JWT_REFRESH_TOKEN_VALIDITY = (long) 7 * 24 * 60 * 60; // 7 days
+    public static final Long JWT_TOKEN_VALIDITY = (long) 5 * 60 * 60; // 5 hours
+    public static final Long JWT_REFRESH_TOKEN_VALIDITY = (long) 7 * 24 * 60 * 60; // 7 days
     private static final String SECRET = "myverylongsecretkeythatisatleast32characters";
     private final SecretKey key = Keys.hmacShaKeyFor(SECRET.getBytes(StandardCharsets.UTF_8));
 

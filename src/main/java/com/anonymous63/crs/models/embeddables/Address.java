@@ -1,5 +1,6 @@
 package com.anonymous63.crs.models.embeddables;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -13,9 +14,14 @@ import lombok.NoArgsConstructor;
 @Embeddable
 public class Address {
 
+    @Column(length = 20)
     private String street;
+    @Column(length = 20)
     private String city;
+    @Column(length = 20)
     private String state;
+    @Column(length = 20)
     private String country;
-    private String pinCode;
+    @Column(length = 10)
+    private Integer pinCode;
 }

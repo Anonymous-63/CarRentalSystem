@@ -19,15 +19,21 @@ public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(unique = true)
+    @Column(unique = true, nullable = false, length = 20)
     private String username;
+    @Column(nullable = false)
     private String password;
+    @Column(nullable = false, length = 20)
     private String firstName;
+    @Column(nullable = false, length = 20)
     private String lastName;
+    @Column(unique = true, nullable = false, length = 100)
     private String email;
+    @Column(unique = true, nullable = false, length = 10)
     private String mobileNo;
     @Embedded
     private Address address;
+    @Column(nullable = false)
     private boolean enabled = true;
 
     @ManyToMany(fetch = FetchType.EAGER)

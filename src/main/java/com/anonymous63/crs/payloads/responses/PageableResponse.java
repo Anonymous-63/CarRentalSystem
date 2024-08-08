@@ -15,15 +15,15 @@ import java.util.List;
 @Builder
 public class PageableResponse<T> {
     private List<T> entities;
-    private int totalPages;
-    private long totalElements;
-    private int noOfElements;
-    private int currentPage;
-    private int itemsPerPage;
-    private boolean isEmpty;
-    private boolean hasNext;
-    private boolean hasPrevious;
-    private boolean isFirst;
-    private boolean isLast;
+    private Integer totalPages;
+    private Long totalElements;
+    private Integer noOfElements;
+    private Integer currentPage;
+    private Integer itemsPerPage;
+    private Boolean isEmpty;
+    private Boolean hasNext;
+    private Boolean hasPrevious;
+    private Boolean isFirst;
+    private Boolean isLast;
 
 }

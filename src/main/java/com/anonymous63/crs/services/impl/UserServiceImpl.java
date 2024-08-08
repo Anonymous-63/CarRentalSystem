@@ -119,7 +119,7 @@ public class UserServiceImpl implements UserService {
     public UserDto register(UserDto userDto) {
         User user = this.modelMapper.map(userDto, User.class);
         this.userRepo.findByUsername(user.getUsername()).ifPresent(u -> {
-            throw new IllegalArgumentException("Username already exists");
+            throw new DuplicateResourceException(User.class.getSimpleName(), "id", user.getId());
         });
         // Set the address
         Address address = Address.builder()

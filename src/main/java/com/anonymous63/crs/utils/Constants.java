@@ -21,7 +21,7 @@ public class Constants {
         DISABLE(6, "Disable"),
         ENABLE(7, "Enable");
 
-        private final int operationId;
+        private final Integer operationId;
         private final String operationName;
 
         Operation(int operationId, String operationName) {
