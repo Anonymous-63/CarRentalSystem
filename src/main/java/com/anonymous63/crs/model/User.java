@@ -2,6 +2,11 @@ package com.anonymous63.crs.model;
 
 import java.time.LocalDateTime;
 
+import jakarta.persistence.Entity;
+import lombok.Data;
+
+@Entity
+@Data
 public class User {
     private Long id;
     private String userName;
